@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "^2.23.0",
     "tslint": "^6.1.0",
     "eslint": "^6.8.0",
-    "ts-node": "^8.6.2",
+    "ts-node": "^8.7.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {
