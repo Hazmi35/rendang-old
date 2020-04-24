@@ -51,7 +51,7 @@
     "zlib-sync": "^0.1.6"
   },
   "devDependencies": {
-    "@types/mongoose": "^5.7.12",
+    "@types/mongoose": "^5.7.13",
     "@types/node": "^13.13.2",
     "@types/superagent": "^4.1.7",
     "@typescript-eslint/eslint-plugin": "^2.29.0",
