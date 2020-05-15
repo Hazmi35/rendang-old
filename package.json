@@ -43,7 +43,7 @@
     "@types/mongoose": "^5.7.20",
     "@types/node": "^13.13.5",
     "@types/superagent": "^4.1.7",
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.30.0",
     "eslint": "^6.8.0",
     "rimraf": "^3.0.2",
