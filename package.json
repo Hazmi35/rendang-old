@@ -34,7 +34,7 @@
     "discord.js": "github:discordjs/discord.js",
     "dotenv": "^8.2.0",
     "kurasuta": "^2.1.0",
-    "mongoose": "^5.9.11",
+    "mongoose": "^5.9.16",
     "superagent": "^5.2.2",
     "ts-mongoose": "0.0.21",
     "winston": "^3.2.1"
