@@ -30,7 +30,7 @@
     "test": "echo [TEST] Starting test. && yarn run lint && yarn run build:test && echo [TEST] Done! Everything looks good."
   },
   "dependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^4.1.0",
     "discord.js": "github:discordjs/discord.js",
     "dotenv": "^8.2.0",
     "kurasuta": "^2.1.0",
