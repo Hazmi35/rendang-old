@@ -40,7 +40,7 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
-    "@types/mongoose": "^5.7.23",
+    "@types/mongoose": "^5.7.24",
     "@types/node": "^13.13.5",
     "@types/superagent": "^4.1.7",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
