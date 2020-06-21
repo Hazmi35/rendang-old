@@ -37,7 +37,7 @@
     "mongoose": "^5.9.11",
     "superagent": "^5.2.2",
     "ts-mongoose": "0.0.21",
-    "winston": "^3.2.1"
+    "winston": "^3.3.0"
   },
   "devDependencies": {
     "@types/mongoose": "^5.7.27",
