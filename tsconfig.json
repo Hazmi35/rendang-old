@@ -1,23 +1,26 @@
 {
-  "compilerOptions": {
-      "skipLibCheck": true,
-      "module": "commonjs",
-      "target": "esnext",
-      "strict": true,
-      "sourceMap": true,
-      "noImplicitAny": true,
-      "alwaysStrict": true,
-      "esModuleInterop": true,
-      "resolveJsonModule": true,
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "typeRoots": [
-          "node_modules/@types",
-          "types",
-          "src/typings"
-      ],
-      "outDir": "./dist"
-  },
-  "include": ["./src/**/*.ts", "./src/**/*.d.ts", "./src/**/*.js", "./src/**/*.json", "*.ts", "*.js"],
-  "exclude": ["node_modules/**", "tsconfig.json", "tslint.json", "README.md", ".env", "dist/**"]
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "commonjs",
+		"allowJs": true,
+		"strict": true,
+		"skipLibCheck": true,
+		"noImplicitAny": true,
+		"alwaysStrict": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"typeRoots": [
+			"node_modules/@types",
+			"typings"
+		],
+		"baseUrl": ".",
+		"paths": {
+			"typings/*": [ "typings/*" ]
+		},
+		"outDir": "./dist"
+	},
+	"exclude": [ "node_modules/**" ],
+	"include": [ "src/**/*", "typings/*" ]
 }

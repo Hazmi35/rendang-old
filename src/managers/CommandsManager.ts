@@ -1,12 +1,17 @@
+/* import Rendang from "../structures/Rendang";
 import { readdir } from "fs";
-import BotClient from "./BotClient";
-import { CommandComponent, ModuleConf } from "../typings";
+import { Collection } from "discord.js";
 
-export default class ModulesLoader {
-    constructor(private client: BotClient, readonly path: string) {}
+export default class CommandsManager {
+    readonly commands: Collection<string, CommandComponent> = new Collection();
+    readonly aliases: Collection<string, string> = new Collection();
+    readonly categories: Collection<string, Collection<string, CommandComponent>> = new Collection();
+    readonly helpMeta: Collection<string, HelpMeta> = new Collection();
+    readonly cooldowns: Collection<string, Collection<Snowflake, number>> = new Collection();
+    constructor(public client: Rendang) {}
 
-    public build(): BotClient {
-        readdir(this.path, (err, categoriesRaw: string[]) => {
+    public load(path: string): void {
+        readdir(path, (err, categoriesRaw: string[]) => {
             if (err) {
                 this.client.log.error("MODULES_LOADER_ERR: ", err);
             }
@@ -39,4 +44,4 @@ export default class ModulesLoader {
         });
         return this.client;
     }
-}
+} */

@@ -46,6 +46,7 @@
         "@typescript-eslint/prefer-function-type": "warn",
         "@typescript-eslint/explicit-function-return-type": "warn",
         "@typescript-eslint/no-var-requires": "off",
+        "prefer-template": "warn",
         "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/quotes": [
             "warn",
