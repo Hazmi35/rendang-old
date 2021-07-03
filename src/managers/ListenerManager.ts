@@ -10,9 +10,6 @@ export default class ListenerManager {
         this.client.logger.info(`Listener #${this.listenerCount(event.name)} for event '${event.name}'`);
         return this.client.addListener(event.name, (...args: any) => event.execute(...args));
     }
-    public remove(eventName: IEvent["name"]): Rendang {
-        return this.client.removeListener(eventName, () => this.client.logger.info(`Listener ${this.listenerCount(eventName)} for event '${eventName}' has been removed`));
-    }
     public emit(eventName: IEvent["name"]): any {
         return this.client.emit(eventName);
     }
@@ -23,9 +20,20 @@ export default class ListenerManager {
         return this.client.listeners(eventName);
     }
     public load(path: string): Rendang {
-        const eventFiles: string[] | undefined = readdirSync(path);
+        const eventFiles: string[] = readdirSync(path);
         for (const eventFile of eventFiles) {
-            if (eventFile.endsWith(".map")) continue;
+            const event = new (require(`${path}/${eventFile}`).default)(this.client);
+            this.add(event);
+        }
+        return this.client;
+    }
+    public remove(eventName: IEvent["name"]): Rendang {
+        return this.client.removeListener(eventName, () => this.client.logger.info(`Listener ${this.listenerCount(eventName)} for event '${eventName}' has been removed`));
+    }
+    public reload(path: string, eventName?: IEvent["name"]): Rendang {
+        const eventFiles: string[] = [];
+        if (!eventName) readdirSync(path).forEach(e => eventFiles.push(e));
+        for (const eventFile of eventFiles) {
             const event = new (require(`${path}/${eventFile}`).default)(this.client);
             this.add(event);
         }
