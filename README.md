@@ -3,8 +3,8 @@
 </p>
 
 <p align="center">
-    <a href='https://github.com/Hazmi35/rendang/workflows/'>
-        <img alt="Workflows" src="https://github.com/Hazmi35/rendang/workflows/Node.js%20CI/badge.svg">
+    <a href='https://github.com/Hazmi35/rendang-old/workflows/'>
+        <img alt="Workflows" src="https://github.com/Hazmi35/rendang-OLD/workflows/Node.js%20CI/badge.svg">
     </a>
 </p>
 
